@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var pdc = PokeDataController()
+    @State var viewIndex: Int = 0
+        
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        if(viewIndex == 0) { ListView(pokeData: pdc.pokeData, viewIndex: $viewIndex) }
     }
 }
 
@@ -19,3 +23,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
