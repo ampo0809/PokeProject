@@ -9,7 +9,7 @@ import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private var baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=100"
+    private var baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=1300"
 //    let cache = NSCache<NSString, UIImage>()
     
     // poke max count = 1125

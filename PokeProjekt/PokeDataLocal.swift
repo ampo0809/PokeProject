@@ -9,13 +9,13 @@ import SwiftUI
 
 struct PokeDataLocal: Identifiable, Hashable {
 
-    let id = UUID()
-    let name: String
-    let type: String
-    let abbility: String
-    let game: String
-    let level: Int
-    let image: String
+    var id = UUID()
+    var name: String?
+    var type: String?
+    var abbility: String?
+    var game: String?
+    var level: Int?
+    var image: String?
 
     init(name: String, type: String, abbility: String, game: String, level: Int) {
         self.name = name
@@ -23,6 +23,11 @@ struct PokeDataLocal: Identifiable, Hashable {
         self.abbility = abbility
         self.game = game
         self.level = level
+        self.image = name
+    }
+    
+    init(name: String) {
+        self.name = name
         self.image = name
     }
 }

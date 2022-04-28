@@ -24,7 +24,6 @@ struct ListView: View {
                     }
                 }
             }
-            
                 .navigationTitle("Pokédex")
                 .toolbar {
                     
@@ -60,27 +59,20 @@ fileprivate struct ReusableRow: View {
     var body: some View {
         HStack() {
             
-            Text(String(dexCount))
-            Image(pokeData.image)
+//            Text(String(dexCount))
+            Image(pokeData.image ?? "pikachu")
             
-            VStack(alignment: .leading) {
-                Text(pokeData.name.capitalized)
+            HStack {
+                Text(pokeData.name!.capitalized)
                     .font(.title3)
-                Text(pokeData.type.capitalized)
+                Spacer()
+//                Text(pokeData.type?.capitalized ?? "")
+//                    .font(.footnote)
+                Text(String(dexCount))
                     .font(.footnote)
-                
+                    .foregroundColor(Color(uiColor: .systemGray))
             }
         }
-        
-        //        let _ = NetworkManager.shared.getPokemons { result in
-        //
-        //            switch result {
-        //            case .success(let poke):
-        //                print(poke.results)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
         
     }
 }

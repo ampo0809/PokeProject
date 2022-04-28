@@ -1,11 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "squirtle@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Image.png",
+      "filename" : "squirtle@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
