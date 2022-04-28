@@ -10,6 +10,7 @@
 		662CA2102819687000F2455F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CA20F2819687000F2455F /* ListView.swift */; };
 		662CA21428197D0A00F2455F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CA21328197D0A00F2455F /* NetworkManager.swift */; };
 		66409DAC281A75AB00A16811 /* NamesAndUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DAB281A75AB00A16811 /* NamesAndUrl.swift */; };
+		66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DAE281A9A3500A16811 /* SpecsView.swift */; };
 		66CF7AF3281956A00026A2C0 /* PokeProjektApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF7AF2281956A00026A2C0 /* PokeProjektApp.swift */; };
 		66CF7AF5281956A00026A2C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF7AF4281956A00026A2C0 /* ContentView.swift */; };
 		66CF7AF7281956A30026A2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CF7AF6281956A30026A2C0 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		662CA20F2819687000F2455F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		662CA21328197D0A00F2455F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		66409DAB281A75AB00A16811 /* NamesAndUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesAndUrl.swift; sourceTree = "<group>"; };
+		66409DAE281A9A3500A16811 /* SpecsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsView.swift; sourceTree = "<group>"; };
 		66CF7AEF2819569F0026A2C0 /* PokeProjekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeProjekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CF7AF2281956A00026A2C0 /* PokeProjektApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeProjektApp.swift; sourceTree = "<group>"; };
 		66CF7AF4281956A00026A2C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		66409DAD281A99EB00A16811 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				662CA20F2819687000F2455F /* ListView.swift */,
+				66409DAE281A9A3500A16811 /* SpecsView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		66CF7AE62819569F0026A2C0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +96,7 @@
 				66CF7B04281959030026A2C0 /* PokeDataLocal.swift */,
 				66CF7B082819598E0026A2C0 /* PokeDataController.swift */,
 				66CF7AF4281956A00026A2C0 /* ContentView.swift */,
-				662CA20F2819687000F2455F /* ListView.swift */,
+				66409DAD281A99EB00A16811 /* Screens */,
 				66CF7B0D281961880026A2C0 /* Extensions */,
 				66CF7AF6281956A30026A2C0 /* Assets.xcassets */,
 				66CF7AF8281956A30026A2C0 /* Preview Content */,
@@ -181,6 +192,7 @@
 			files = (
 				66CF7B092819598E0026A2C0 /* PokeDataController.swift in Sources */,
 				66CF7AF5281956A00026A2C0 /* ContentView.swift in Sources */,
+				66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */,
 				662CA2102819687000F2455F /* ListView.swift in Sources */,
 				66409DAC281A75AB00A16811 /* NamesAndUrl.swift in Sources */,
 				662CA21428197D0A00F2455F /* NetworkManager.swift in Sources */,

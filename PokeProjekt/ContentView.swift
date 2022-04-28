@@ -11,10 +11,12 @@ struct ContentView: View {
     
     @ObservedObject private var pdc = PokeDataController()
     @State var viewIndex: Int = 0
-        
+    
     var body: some View {
         
         if(viewIndex == 0) { ListView(pokeData: pdc.pokeData, viewIndex: $viewIndex) }
+      
+    
     }
 }
 
