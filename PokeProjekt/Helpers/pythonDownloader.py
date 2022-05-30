@@ -1139,7 +1139,6 @@ for nam in names:
     urllib.request.urlretrieve(url, f"/Users/nacho/Desktop/pokeImages/{nam}@2x.png")
     print(url)
 
-
     print(index, nam)
     index += 1
 
