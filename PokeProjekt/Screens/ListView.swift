@@ -10,48 +10,16 @@ import SwiftUI
 struct ListView: View {
     
     @State var pokeData: [PokeDataLocal]
-    @Binding var viewIndex: Int
     
     var body: some View {
         
-        NavigationView {
-            VStack() {
-                List(pokeData.indices, id: \.self) { i in
-                    // id mandatory when using .indices
-                    
-                    NavigationLink(destination: SpecsView(selectedPokemon: pokeData[i].name!)) {
-                        ReusableRow(pokeData: pokeData[i], dexCount: i+1)
-                    }
-                }
-            }
-            .navigationTitle("Pokédex")
-            .toolbar {
-                
-                ToolbarItemGroup(placement: .bottomBar) {
-                    
-                    
-                    Spacer()
-                    Button("\(Image(systemName: "sparkle.magnifyingglass"))", role: .destructive) {
-                        print("Search pressed")
-                        
-                    }
-                    
-                    Spacer()
-                    Button("\(Image(systemName: "star.circle"))", role: .destructive) {
-                        print("Favourites presseed")
-                    }
-                    
-                    Spacer()
-                    Button("\(Image(systemName: "rotate.3d"))", role: .destructive) {
-                        print("Paper plane presseed")
-                    }
-                    
-                    Spacer()
-                }
+        List(pokeData.indices, id: \.self) { i in
+            // id mandatory when using .indices
+            
+            NavigationLink(destination: SpecsView(selectedPokemon: pokeData[i].name!)) {
+                ReusableRow(pokeData: pokeData[i], dexCount: i+1)
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
-        //Not sure what this does, but silences an annoying error: https://stackoverflow.com/questions/65316497/
     }
 }
 
@@ -63,8 +31,6 @@ fileprivate struct ReusableRow: View {
     
     var body: some View {
         HStack() {
-            
-            //            Text(String(dexCount))
             Image(pokeData.image ?? "Unknown")
             
             HStack {
