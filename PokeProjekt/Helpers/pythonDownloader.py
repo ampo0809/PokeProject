@@ -1130,12 +1130,6 @@ names = [
     "toxtricity-low-key-gmax"
     ]
         
-
-# for i in range(1, 1127):
-#     url = f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{i}.png"
-#     # urllib.request.urlretrieve(url, f"/Users/nacho/Desktop/pokeImages/image{i}.png")
-#     print(url)
-
 index = 1
 
 for nam in names:

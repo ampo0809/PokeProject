@@ -19,31 +19,36 @@ struct ListView: View {
                 List(pokeData.indices, id: \.self) { i in
                     // id mandatory when using .indices
                     
-                    NavigationLink(destination: SpecsView()) {
+                    NavigationLink(destination: SpecsView(selectedPokemon: pokeData[i].name!)) {
                         ReusableRow(pokeData: pokeData[i], dexCount: i+1)
                     }
                 }
             }
-                .navigationTitle("Pokédex")
-                .toolbar {
+            .navigationTitle("Pokédex")
+            .toolbar {
+                
+                ToolbarItemGroup(placement: .bottomBar) {
                     
-                    ToolbarItemGroup(placement: .bottomBar) {
-                        
-                        HStack(alignment: .center) {
-                            Spacer()
-                            Button("\(Image(systemName: "sparkle.magnifyingglass"))", role: .destructive) {
-                                print("Search pressed")
-                            }
-                            Spacer()
-                            Button("\(Image(systemName: "star.circle"))", role: .destructive) {
-                                print("Favourites presseed")
-                            }
-                            Spacer()
-                            // Crappy solution, must be refactored
-                        }
+                    
+                    Spacer()
+                    Button("\(Image(systemName: "sparkle.magnifyingglass"))", role: .destructive) {
+                        print("Search pressed")
                         
                     }
+                    
+                    Spacer()
+                    Button("\(Image(systemName: "star.circle"))", role: .destructive) {
+                        print("Favourites presseed")
+                    }
+                    
+                    Spacer()
+                    Button("\(Image(systemName: "rotate.3d"))", role: .destructive) {
+                        print("Paper plane presseed")
+                    }
+                    
+                    Spacer()
                 }
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         //Not sure what this does, but silences an annoying error: https://stackoverflow.com/questions/65316497/
@@ -59,15 +64,15 @@ fileprivate struct ReusableRow: View {
     var body: some View {
         HStack() {
             
-//            Text(String(dexCount))
-            Image(pokeData.image ?? "pikachu")
+            //            Text(String(dexCount))
+            Image(pokeData.image ?? "Unknown")
             
             HStack {
                 Text(pokeData.name!.capitalized)
                     .font(.title3)
                 Spacer()
-//                Text(pokeData.type?.capitalized ?? "")
-//                    .font(.footnote)
+                //                Text(pokeData.type?.capitalized ?? "")
+                //                    .font(.footnote)
                 Text(String(dexCount))
                     .font(.footnote)
                     .foregroundColor(Color(uiColor: .systemGray))

@@ -7,52 +7,47 @@
 
 import UIKit
 
-class NetworkManager {
+class NetworkManager: ObservableObject {
     static let shared = NetworkManager()
-    private var baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=1300"
+    fileprivate var baseUrl = "https://pokeapi.co/api/v2/pokemon/"
 //    let cache = NSCache<NSString, UIImage>()
-    
     // poke max count = 1125
 
     private init() {}
     
-    func getPokemons(completed: @escaping (Result<NamesAndUrl, Error>) -> Void) {
-        let endpoint = baseUrl
+    func getPokemons(name: String, completed: @escaping (Result<GeneralSpecs, PokeError>) -> Void) {
+        let endpoint = baseUrl + name
         
         guard let url = URL(string: endpoint) else {
-//            completed(.failure("meh" as! Error))
+            completed(.failure(.invalidName))
             return
         }
     
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
                         
             if let _ = error {
-//                completed(.failure(.unableToComplete))
+                completed(.failure(.unableToComplete))
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-//                completed(.failure(.invalidResponse))
+                completed(.failure(.invalidResponse))
                 return
             }
 
             guard let data = data else {
-//                completed(.failure(.invalidData))
+                completed(.failure(.invalidData))
                 return
             }
             
             do {
-                
                 let decoder = JSONDecoder()
-//                decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-
                 
-                let poke = try decoder.decode(NamesAndUrl.self, from: data)
+                let poke = try decoder.decode(GeneralSpecs.self, from: data)
                 completed(.success(poke))
                 
                 
             } catch {
-//                completed(.failure(.invalidData))
+                completed(.failure(.invalidData))
                 print(error.self)
             }
         }

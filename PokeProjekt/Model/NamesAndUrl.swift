@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Not needed for now as names and images are hardcoded
 struct NamesAndUrl: Codable  {
 
     let count: Int
