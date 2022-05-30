@@ -13,6 +13,7 @@
 		66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DAE281A9A3500A16811 /* SpecsView.swift */; };
 		66409DB1281ABF5500A16811 /* NamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DB0281ABF5500A16811 /* NamesArray.swift */; };
 		66409DB4281ADA9800A16811 /* pythonDownloader.py in Resources */ = {isa = PBXBuildFile; fileRef = 66409DB3281ADA9800A16811 /* pythonDownloader.py */; };
+		669EBFD02844BB0700FD1632 /* EvolutionChainUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBFCF2844BB0700FD1632 /* EvolutionChainUrl.swift */; };
 		66B9D918283CE1CE00175FBE /* StretchableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B9D917283CE1CE00175FBE /* StretchableHeader.swift */; };
 		66B9D91A283CF2E300175FBE /* PokeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B9D919283CF2E300175FBE /* PokeError.swift */; };
 		66B9D91C283E0D7600175FBE /* GeneralSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B9D91B283E0D7600175FBE /* GeneralSpecs.swift */; };
@@ -32,6 +33,7 @@
 		66409DAE281A9A3500A16811 /* SpecsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsView.swift; sourceTree = "<group>"; };
 		66409DB0281ABF5500A16811 /* NamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesArray.swift; sourceTree = "<group>"; };
 		66409DB3281ADA9800A16811 /* pythonDownloader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pythonDownloader.py; sourceTree = "<group>"; };
+		669EBFCF2844BB0700FD1632 /* EvolutionChainUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionChainUrl.swift; sourceTree = "<group>"; };
 		66B9D917283CE1CE00175FBE /* StretchableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchableHeader.swift; sourceTree = "<group>"; };
 		66B9D919283CF2E300175FBE /* PokeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeError.swift; sourceTree = "<group>"; };
 		66B9D91B283E0D7600175FBE /* GeneralSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSpecs.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				66409DAB281A75AB00A16811 /* NamesAndUrl.swift */,
 				66B9D91B283E0D7600175FBE /* GeneralSpecs.swift */,
+				669EBFCF2844BB0700FD1632 /* EvolutionChainUrl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				66B9D918283CE1CE00175FBE /* StretchableHeader.swift in Sources */,
 				66409DAC281A75AB00A16811 /* NamesAndUrl.swift in Sources */,
 				66B9D91A283CF2E300175FBE /* PokeError.swift in Sources */,
+				669EBFD02844BB0700FD1632 /* EvolutionChainUrl.swift in Sources */,
 				662CA21428197D0A00F2455F /* NetworkManager.swift in Sources */,
 				66CF7B0B281961780026A2C0 /* View+Ext.swift in Sources */,
 				66CF7AF3281956A00026A2C0 /* PokeProjektApp.swift in Sources */,

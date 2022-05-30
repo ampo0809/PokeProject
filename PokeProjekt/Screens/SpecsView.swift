@@ -27,7 +27,6 @@ struct SpecsView: View {
 }
 
 
-
 struct BodyContent: View {
     
     @Binding var selectedPokemon: String
@@ -77,7 +76,7 @@ struct BodyContent: View {
         }
         .task {
             await getGeneralSpecs()
-            print(pokeGeneralSpecs.first?.moves[0].move.name)
+//            print(pokeGeneralSpecs.first?.species.url)
             
             
         }

@@ -20,7 +20,7 @@ struct GeneralSpecs: Codable, Hashable {
     let name: String
 //    let order: Int
 //    let pastTypes: [JSONAny]
-//    let species: Species
+    let species: Species
 //    let sprites: Sprites
 //    let stats: [Stat]
 //    let types: [TypeElement]
@@ -31,7 +31,7 @@ struct GeneralSpecs: Codable, Hashable {
         case name
         case weight, height
         case baseExperience = "base_experience"
-        case moves
+        case moves, species
         
     }
 }
