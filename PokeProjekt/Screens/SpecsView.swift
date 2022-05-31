@@ -11,6 +11,10 @@ struct SpecsView: View {
     
     @State var selectedPokemon: String
     @State private var isFavourite: Bool = false
+    @State private var pokeGeneralSpecs = [GeneralSpecs]()
+    @State private var evolutionDetails = [EvolutionDetails]()
+    
+    @State private var defaults = UserDefaults.standard
     
     var body: some View {
         VStack(alignment: .center) {
@@ -23,16 +27,40 @@ struct SpecsView: View {
             maxWidth: 100,
             maxHeight: 100)
  
-        BodyContent(selectedPokemon: $selectedPokemon)
+        BodyContent(selectedPokemon: $selectedPokemon, pokeGeneralSpecs: $pokeGeneralSpecs, evolutionDetails: $evolutionDetails)
         
             .toolbar {
-                let starImage = isFavourite ? "star" : "star.fill"
+                let starImage = isFavourite ? "star.fill" : "star"
                 
                 Button("\(Image(systemName: starImage))", role: .destructive) {
                     isFavourite.toggle()
+                    
+                    let selectedFavourites = FavouritesData.init(generalSpecs: pokeGeneralSpecs, evolutionDetails: evolutionDetails)
+                    
+                    if isFavourite {
+                        // Update with new item
+                        defaults.set(true, forKey: selectedPokemon)
+                        
+                        PersistanceManager.updateFavoPokemons(favourite: selectedFavourites, actionType: .add) { error in
+                            print(error ?? "\(selectedPokemon.capitalized) successfully added")
+                            return
+                        }
+                    }
+                    
+                    if !isFavourite {
+                        // Remove item
+                        defaults.removeObject(forKey: selectedPokemon)
+                        
+                        PersistanceManager.updateFavoPokemons(favourite: selectedFavourites, actionType: .remove) { error in
+                            print(error ?? "\(selectedPokemon.capitalized) successfully removed")
+                            return
+                        }
+                    }
                 }
-
+                
+                .onAppear() { if defaults.bool(forKey: selectedPokemon) { isFavourite = true } }
             }
+        
     }
 }
 
@@ -40,14 +68,15 @@ struct SpecsView: View {
 struct BodyContent: View {
     
     @Binding var selectedPokemon: String
-    @State private var pokeGeneralSpecs = [GeneralSpecs]()
-    @State private var unknown: String = "Unknown"
+    @Binding var pokeGeneralSpecs: [GeneralSpecs]
+    @Binding var evolutionDetails: [EvolutionDetails]
+    
     @State private var listOfMoves = [String]()
-    @State private var isShowingMoreMoves: Bool = false
     @State private var firstEvolutionState = String()
     @State private var secondEvolutionState = [String]()
     @State private var thirdEvolutionState = [String]()
-
+    
+    @State private var isShowingMoreMoves: Bool = false
 
     var body: some View {
         
@@ -149,6 +178,7 @@ extension BodyContent {
             switch result {
             case .success(let poke):
 //                print(poke.chain)
+                evolutionDetails.append(poke)
 
                 firstEvolutionState = poke.chain.species.name
                 
