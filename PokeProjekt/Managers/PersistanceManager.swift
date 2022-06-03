@@ -44,9 +44,10 @@ enum PersistanceManager {
             }
         }
         
-        let obj = defaults.object(forKey: Keys.favourites) as! Data
-        let str = String(decoding: obj, as: UTF8.self)
-        print(str)
+        // For testing
+//        let obj = defaults.object(forKey: Keys.favourites) as! Data
+//        let str = String(decoding: obj, as: UTF8.self)
+//        print(str)
     }
 
     
@@ -59,7 +60,12 @@ enum PersistanceManager {
         do {
             let decoder = JSONDecoder()
             let favourites = try decoder.decode([FavouritesData].self, from: favouritesData)
-            completed(.success(favourites))
+
+            let sortedFavourites = favourites.sorted {
+                $0.generalSpecs.first!.name < $1.generalSpecs.first!.name
+            }
+
+            completed(.success(sortedFavourites))
 
         } catch {
             completed(.failure(.unableToAddFavourite))

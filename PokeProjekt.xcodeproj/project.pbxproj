@@ -3,16 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		662CA2102819687000F2455F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CA20F2819687000F2455F /* ListView.swift */; };
 		662CA21428197D0A00F2455F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CA21328197D0A00F2455F /* NetworkManager.swift */; };
-		66409DAC281A75AB00A16811 /* NamesAndUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DAB281A75AB00A16811 /* NamesAndUrl.swift */; };
 		66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DAE281A9A3500A16811 /* SpecsView.swift */; };
 		66409DB1281ABF5500A16811 /* NamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DB0281ABF5500A16811 /* NamesArray.swift */; };
-		66409DB4281ADA9800A16811 /* pythonDownloader.py in Resources */ = {isa = PBXBuildFile; fileRef = 66409DB3281ADA9800A16811 /* pythonDownloader.py */; };
+		66409DB4281ADA9800A16811 /* PythonDownloader.py in Resources */ = {isa = PBXBuildFile; fileRef = 66409DB3281ADA9800A16811 /* PythonDownloader.py */; };
+		66496A2A284A37D2000376DE /* FavouritesDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66496A29284A37D2000376DE /* FavouritesDataController.swift */; };
+		66606C08284625B70056B859 /* FavouritesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66606C07284625B70056B859 /* FavouritesGridView.swift */; };
 		6693BBE62845F40200C119C2 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6693BBE52845F40200C119C2 /* PersistanceManager.swift */; };
 		6693BBE82845F7A300C119C2 /* FavouritesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6693BBE72845F7A300C119C2 /* FavouritesData.swift */; };
 		669EBFD02844BB0700FD1632 /* EvolutionChainUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669EBFCF2844BB0700FD1632 /* EvolutionChainUrl.swift */; };
@@ -32,10 +33,11 @@
 /* Begin PBXFileReference section */
 		662CA20F2819687000F2455F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		662CA21328197D0A00F2455F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		66409DAB281A75AB00A16811 /* NamesAndUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesAndUrl.swift; sourceTree = "<group>"; };
 		66409DAE281A9A3500A16811 /* SpecsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsView.swift; sourceTree = "<group>"; };
 		66409DB0281ABF5500A16811 /* NamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesArray.swift; sourceTree = "<group>"; };
-		66409DB3281ADA9800A16811 /* pythonDownloader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pythonDownloader.py; sourceTree = "<group>"; };
+		66409DB3281ADA9800A16811 /* PythonDownloader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonDownloader.py; sourceTree = "<group>"; };
+		66496A29284A37D2000376DE /* FavouritesDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDataController.swift; sourceTree = "<group>"; };
+		66606C07284625B70056B859 /* FavouritesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesGridView.swift; sourceTree = "<group>"; };
 		6693BBE52845F40200C119C2 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		6693BBE72845F7A300C119C2 /* FavouritesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesData.swift; sourceTree = "<group>"; };
 		669EBFCF2844BB0700FD1632 /* EvolutionChainUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionChainUrl.swift; sourceTree = "<group>"; };
@@ -67,11 +69,11 @@
 		662CA21928198A2F00F2455F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				66409DAB281A75AB00A16811 /* NamesAndUrl.swift */,
 				66B9D91B283E0D7600175FBE /* GeneralSpecs.swift */,
 				669EBFCF2844BB0700FD1632 /* EvolutionChainUrl.swift */,
 				669EBFD12844BD8B00FD1632 /* EvolutionDetails.swift */,
 				6693BBE72845F7A300C119C2 /* FavouritesData.swift */,
+				66496A29284A37D2000376DE /* FavouritesDataController.swift */,
 				6693BBEB2845FC8800C119C2 /* Local */,
 			);
 			path = Model;
@@ -92,6 +94,7 @@
 				66CF7AF4281956A00026A2C0 /* ContentView.swift */,
 				662CA20F2819687000F2455F /* ListView.swift */,
 				66409DAE281A9A3500A16811 /* SpecsView.swift */,
+				66606C07284625B70056B859 /* FavouritesGridView.swift */,
 				669EBFD52844F26600FD1632 /* ARButtonsView.swift */,
 			);
 			path = Screens;
@@ -100,7 +103,7 @@
 		66409DB2281ABFA500A16811 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				66409DB3281ADA9800A16811 /* pythonDownloader.py */,
+				66409DB3281ADA9800A16811 /* PythonDownloader.py */,
 				66409DB0281ABF5500A16811 /* NamesArray.swift */,
 			);
 			path = Helpers;
@@ -215,7 +218,7 @@
 				};
 			};
 			buildConfigurationList = 66CF7AEA2819569F0026A2C0 /* Build configuration list for PBXProject "PokeProjekt" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -237,7 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66409DB4281ADA9800A16811 /* pythonDownloader.py in Resources */,
+				66409DB4281ADA9800A16811 /* PythonDownloader.py in Resources */,
 				66CF7AFA281956A30026A2C0 /* Preview Assets.xcassets in Resources */,
 				66CF7AF7281956A30026A2C0 /* Assets.xcassets in Resources */,
 			);
@@ -251,13 +254,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CF7B092819598E0026A2C0 /* PokeDataController.swift in Sources */,
+				66496A2A284A37D2000376DE /* FavouritesDataController.swift in Sources */,
 				66B9D91C283E0D7600175FBE /* GeneralSpecs.swift in Sources */,
 				66CF7AF5281956A00026A2C0 /* ContentView.swift in Sources */,
 				669EBFD22844BD8B00FD1632 /* EvolutionDetails.swift in Sources */,
 				66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */,
 				662CA2102819687000F2455F /* ListView.swift in Sources */,
 				66409DB1281ABF5500A16811 /* NamesArray.swift in Sources */,
-				66409DAC281A75AB00A16811 /* NamesAndUrl.swift in Sources */,
+				66606C08284625B70056B859 /* FavouritesGridView.swift in Sources */,
 				66B9D91A283CF2E300175FBE /* PokeError.swift in Sources */,
 				669EBFD02844BB0700FD1632 /* EvolutionChainUrl.swift in Sources */,
 				662CA21428197D0A00F2455F /* NetworkManager.swift in Sources */,

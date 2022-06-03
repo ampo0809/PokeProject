@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct FavouritesData: Codable, Hashable {
+struct FavouritesData: Codable, Hashable, Identifiable {
+    var id = UUID()
     
     let generalSpecs: [GeneralSpecs]
     let evolutionDetails: [EvolutionDetails]

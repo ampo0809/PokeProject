@@ -907,7 +907,7 @@ class NamesArray {
         "regidrago",
         "glastrier",
         "spectrier",
-        "calyrex",
+        "calyrex"
 //        "deoxys-attack",
 //        "deoxys-defense",
 //        "deoxys-speed",

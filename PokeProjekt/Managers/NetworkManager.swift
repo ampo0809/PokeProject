@@ -54,7 +54,6 @@ class NetworkManager: ObservableObject {
     
     
     func getSpecies(with endpoint: String, completed: @escaping (Result<EvolutionChainUrl, PokeError>) -> Void) {
-//        let endpoint = speciesUrl
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidName))
@@ -93,7 +92,6 @@ class NetworkManager: ObservableObject {
     
     
     func getEvolutionDetails(with endpoint: String, completed: @escaping (Result<EvolutionDetails, PokeError>) -> Void) {
-//        let endpoint = evolutionChainUrl
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidName))

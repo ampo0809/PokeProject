@@ -18,6 +18,7 @@ struct ContentView: View {
         NavigationView {
             VStack() {
                 if viewIndex == 0 { ListView(pokeData: pdc.pokeData) }
+                if viewIndex == 1 { FavouritesGridView() }
                 if viewIndex == 2 { ARButtonsView() }
             }
             .navigationTitle(navigationTitle)
@@ -33,7 +34,8 @@ struct ContentView: View {
                     
                     Spacer()
                     Button("\(Image(systemName: "star.circle"))", role: .destructive) {
-                        print("Favourites presseed")
+                        viewIndex = 1
+                        navigationTitle = "Favourites"
                     }
                     
                     Spacer()

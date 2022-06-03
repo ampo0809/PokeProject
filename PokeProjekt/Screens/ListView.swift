@@ -16,7 +16,7 @@ struct ListView: View {
         List(pokeData.indices, id: \.self) { i in
             // id mandatory when using .indices
             
-            NavigationLink(destination: SpecsView(selectedPokemon: pokeData[i].name!)) {
+            NavigationLink(destination: SpecsView(selectedPokemon: pokeData[i].name, isPerformingNetworkCall: .constant(true))) {
                 ReusableRow(pokeData: pokeData[i], dexCount: i+1)
             }
         }
@@ -31,14 +31,13 @@ fileprivate struct ReusableRow: View {
     
     var body: some View {
         HStack() {
-            Image(pokeData.image ?? "Unknown")
+            Image(pokeData.name)
             
             HStack {
-                Text(pokeData.name!.capitalized)
+                Text(pokeData.name.capitalized)
                     .font(.title3)
                 Spacer()
-                //                Text(pokeData.type?.capitalized ?? "")
-                //                    .font(.footnote)
+
                 Text(String(dexCount))
                     .font(.footnote)
                     .foregroundColor(Color(uiColor: .systemGray))

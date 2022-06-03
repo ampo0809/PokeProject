@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ARButtonsView: View {
+    
     var body: some View {
         
         Button {
@@ -28,7 +29,7 @@ struct ARButtonsView: View {
         .cornerRadius(2)
         
         Spacer().frame(height: 40)
-        
+            
         Button {
             print("Oddish button was tapped")
         } label: {
