@@ -9,10 +9,19 @@ import SwiftUI
 
 struct ARButtonsView: View {
     
+    @State private var isPresented = false
+    
     var body: some View {
+
+            
         
         Button {
             print("Eevee button was tapped")
+
+            self.isPresented.toggle()
+
+
+
         } label: {
             VStack {
                 Image("eevee")
@@ -23,6 +32,7 @@ struct ARButtonsView: View {
                 Spacer().frame(height: 20)
             }
         }
+        .fullScreenCover(isPresented: $isPresented, content: ARPokemonVCSwiftUIWrapper.init)
         .frame(width: 150, height: 200, alignment: .center)
         .foregroundColor(.gray)
         .border(.blue, width: 1)

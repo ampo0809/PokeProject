@@ -58,7 +58,6 @@ struct ReusableBox: View {
             }
             .sheet(isPresented: $showingSheet, onDismiss: {
                 print("Sheet dismissed")
-
                 getFavouritesFromLocalData()
                 
             }, content: {
