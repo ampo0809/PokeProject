@@ -12,11 +12,6 @@ struct ARPokemonVCSwiftUIWrapper: UIViewControllerRepresentable {
     
     @Binding var selectedPokemon: String
     
-//    func makeCoordinator() -> Coordinator {
-//        return Coordinator(self)
-//    }
-//
-    
     func makeUIViewController(context: Context) -> UIViewController {
         let arPokemonVC = ARPokemonVC()
         arPokemonVC.pokemonName = selectedPokemon
@@ -26,18 +21,3 @@ struct ARPokemonVCSwiftUIWrapper: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
-
-
-//extension ARPokemonVCSwiftUIWrapper {
-//    class Coordinator: NSObject, UIFontPickerViewControllerDelegate {
-//        var parent: ARPokemonVCSwiftUIWrapper
-//
-//        init(_ parent: ARPokemonVCSwiftUIWrapper) {
-//            self.parent = parent
-//        }
-//
-//        func fontPickerViewControllerDidPickFont(_ viewController: UIFontPickerViewController) {
-////            parent.font = viewController.selectedFontDescriptor
-//        }
-//    }
-//}

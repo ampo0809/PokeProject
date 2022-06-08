@@ -43,17 +43,8 @@ struct ARButton: View {
                 Spacer().frame(height: 20)
             }
         }
-        
         .sheet(isPresented: $isPresented, content: {
-            
-//            NavigationView {
-                ARPokemonVCSwiftUIWrapper(selectedPokemon: $selectedPokemon)
-//            }
-//            .navigationTitle(pokemonName.capitalized)
-//            .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                <#code#>
-//            }
+            ARPokemonVCSwiftUIWrapper(selectedPokemon: $selectedPokemon)
             
         })
         .frame(width: 150, height: 200, alignment: .center)

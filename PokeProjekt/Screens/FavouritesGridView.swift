@@ -25,7 +25,6 @@ struct FavouritesGridView: View {
             }
             .padding(.horizontal)
         }
-//        .task { getFavouritesFromLocalData() }
     }
 }
 
@@ -36,7 +35,6 @@ struct ReusableBox: View {
     @State private var isLongPressed: Bool = false
     
     @State var fdc: FavouritesDataController
-//    @ObservedObject private var fdc = FavouritesDataController()
     
     var body: some View {
         VStack {

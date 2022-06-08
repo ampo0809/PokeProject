@@ -28,23 +28,4 @@ struct FavouritesData: Codable, Hashable, Identifiable {
     static func == (lhs: FavouritesData, rhs: FavouritesData) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-
-//    let listOfMoves: [String]
-//    let firstEvolutionState: String
-//    let secondEvolutionState: [String]
-//    let thirdEvolutionState: [String]
-//
-//    init (generalSpecs: GeneralSpecs,
-//          listOfMoves: [String],
-//          firstEvolutionState: String,
-//          secondEvolutionState: [String],
-//          thirdEvolutionState: [String]
-//    ){
-//        self.generalSpecs = generalSpecs
-//        self.listOfMoves = listOfMoves
-//        self.firstEvolutionState = firstEvolutionState
-//        self.secondEvolutionState = secondEvolutionState
-//        self.thirdEvolutionState = thirdEvolutionState
-//    }
-    
 }

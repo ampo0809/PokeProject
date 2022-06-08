@@ -13,7 +13,6 @@ class NetworkManager: ObservableObject {
 
     private init() {}
     
-    
     func getPokemons(name: String, completed: @escaping (Result<GeneralSpecs, PokeError>) -> Void) {
         let endpoint = baseUrl + "pokemon/\(name)"
         
