@@ -8,50 +8,54 @@
 import SwiftUI
 
 struct ARButtonsView: View {
-    
-    @State private var isPresented = false
-    
+
     var body: some View {
-
-            
         
-        Button {
-            print("Eevee button was tapped")
-
-            self.isPresented.toggle()
-
-
-
-        } label: {
-            VStack {
-                Image("eevee")
-                    .resizable()
-                Text("Eevee")
-                    .font(.headline)
-                    .foregroundColor(.gray)
-                Spacer().frame(height: 20)
-            }
-        }
-        .fullScreenCover(isPresented: $isPresented, content: ARPokemonVCSwiftUIWrapper.init)
-        .frame(width: 150, height: 200, alignment: .center)
-        .foregroundColor(.gray)
-        .border(.blue, width: 1)
-        .cornerRadius(2)
+        ARButton(pokemonName: .constant("eevee"))
         
         Spacer().frame(height: 40)
             
+        ARButton(pokemonName: .constant("oddish"))
+    }
+}
+
+struct ARButton: View {
+    
+    @State private var isPresented = false
+    @State private var selectedPokemon = String()
+    
+    @Binding var pokemonName: String
+    
+    var body: some View {
+        
         Button {
-            print("Oddish button was tapped")
+            print("\(pokemonName) button was tapped")
+            selectedPokemon = pokemonName
+            self.isPresented.toggle()
+            
         } label: {
             VStack {
-                Image("oddish")
+                Image(pokemonName)
                     .resizable()
-                Text("Oddish")
+                Text(pokemonName.capitalized)
                     .font(.headline)
                     .foregroundColor(.gray)
                 Spacer().frame(height: 20)
             }
         }
+        
+        .sheet(isPresented: $isPresented, content: {
+            
+//            NavigationView {
+                ARPokemonVCSwiftUIWrapper(selectedPokemon: $selectedPokemon)
+//            }
+//            .navigationTitle(pokemonName.capitalized)
+//            .navigationBarTitleDisplayMode(.inline)
+//            .toolbar {
+//                <#code#>
+//            }
+            
+        })
         .frame(width: 150, height: 200, alignment: .center)
         .foregroundColor(.gray)
         .border(.blue, width: 1)

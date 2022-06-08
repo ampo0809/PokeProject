@@ -14,7 +14,7 @@
 		66409DB4281ADA9800A16811 /* PythonDownloader.py in Resources */ = {isa = PBXBuildFile; fileRef = 66409DB3281ADA9800A16811 /* PythonDownloader.py */; };
 		66496A2A284A37D2000376DE /* FavouritesDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66496A29284A37D2000376DE /* FavouritesDataController.swift */; };
 		66606C08284625B70056B859 /* FavouritesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66606C07284625B70056B859 /* FavouritesGridView.swift */; };
-		66885A872850B49500364D77 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 66885A862850B49500364D77 /* art.scnassets */; };
+		66885A872850B49500364D77 /* ARPokemonAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 66885A862850B49500364D77 /* ARPokemonAssets.scnassets */; };
 		66885A892850B4E100364D77 /* ARPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66885A882850B4E100364D77 /* ARPokemonVC.swift */; };
 		66885A8C2850BC0000364D77 /* ARPokemonVCSwiftUIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66885A8B2850BC0000364D77 /* ARPokemonVCSwiftUIWrapper.swift */; };
 		6693BBE62845F40200C119C2 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6693BBE52845F40200C119C2 /* PersistanceManager.swift */; };
@@ -41,7 +41,7 @@
 		66409DB3281ADA9800A16811 /* PythonDownloader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonDownloader.py; sourceTree = "<group>"; };
 		66496A29284A37D2000376DE /* FavouritesDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDataController.swift; sourceTree = "<group>"; };
 		66606C07284625B70056B859 /* FavouritesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesGridView.swift; sourceTree = "<group>"; };
-		66885A862850B49500364D77 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		66885A862850B49500364D77 /* ARPokemonAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARPokemonAssets.scnassets; sourceTree = "<group>"; };
 		66885A882850B4E100364D77 /* ARPokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPokemonVC.swift; sourceTree = "<group>"; };
 		66885A8B2850BC0000364D77 /* ARPokemonVCSwiftUIWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPokemonVCSwiftUIWrapper.swift; sourceTree = "<group>"; };
 		6693BBE52845F40200C119C2 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		66885A8A2850BBBE00364D77 /* UIKitComponents */ = {
 			isa = PBXGroup;
 			children = (
-				66885A882850B4E100364D77 /* ARPokemonVC.swift */,
 				66885A8B2850BC0000364D77 /* ARPokemonVCSwiftUIWrapper.swift */,
+				66885A882850B4E100364D77 /* ARPokemonVC.swift */,
 			);
 			path = UIKitComponents;
 			sourceTree = "<group>";
@@ -169,7 +169,6 @@
 		66CF7AF1281956A00026A2C0 /* PokeProjekt */ = {
 			isa = PBXGroup;
 			children = (
-				66885A862850B49500364D77 /* art.scnassets */,
 				66409DB2281ABFA500A16811 /* Helpers */,
 				6693BBE92845FC2A00C119C2 /* Utilities */,
 				662CA21928198A2F00F2455F /* Model */,
@@ -177,6 +176,7 @@
 				66409DAD281A99EB00A16811 /* Screens */,
 				66CF7B0D281961880026A2C0 /* Extensions */,
 				66CF7AF6281956A30026A2C0 /* Assets.xcassets */,
+				66885A862850B49500364D77 /* ARPokemonAssets.scnassets */,
 				6693BBEA2845FC6000C119C2 /* System */,
 				66CF7AF8281956A30026A2C0 /* Preview Content */,
 			);
@@ -258,7 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66409DB4281ADA9800A16811 /* PythonDownloader.py in Resources */,
-				66885A872850B49500364D77 /* art.scnassets in Resources */,
+				66885A872850B49500364D77 /* ARPokemonAssets.scnassets in Resources */,
 				66CF7AFA281956A30026A2C0 /* Preview Assets.xcassets in Resources */,
 				66CF7AF7281956A30026A2C0 /* Assets.xcassets in Resources */,
 			);
@@ -426,6 +426,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,6 +457,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

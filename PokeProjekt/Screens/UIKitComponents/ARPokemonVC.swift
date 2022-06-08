@@ -13,7 +13,7 @@ class ARPokemonVC: UIViewController, ARSCNViewDelegate {
     
     let sceneView = ARSCNView()
     
-    let pokemonName = "oddish"
+    var pokemonName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,8 @@ class ARPokemonVC: UIViewController, ARSCNViewDelegate {
         planeNode.eulerAngles.x = -.pi / 2
         node.addChildNode(planeNode)
         
-        if let pokeScene = SCNScene(named: "art.scnassets/\(pokemonName).scn") {
+        guard let pokemonName = pokemonName else { return nil }
+        if let pokeScene = SCNScene(named: "ARPokemonAssets.scnassets/\(pokemonName).scn") {
             if let pokeNode = pokeScene.rootNode.childNodes.first {
                 pokeNode.eulerAngles.x = .pi / 2
                 planeNode.addChildNode(pokeNode)
