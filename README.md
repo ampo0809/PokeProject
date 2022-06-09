@@ -15,7 +15,9 @@ Alle Pokémon-Fans und gelangweilte Menschen mit einem iPhone.
 ```
           /   List           -> Specifications
 Content   -   Favourites     -> Specifications
-```       \   AR Selections  -> Camera with AR
+          \   AR Selections  -> Camera with AR
+```
+
 
 
 ## Datenstruktur
