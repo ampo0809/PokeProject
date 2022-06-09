@@ -10,7 +10,6 @@
 		662CA2102819687000F2455F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CA20F2819687000F2455F /* ListView.swift */; };
 		662CA21428197D0A00F2455F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CA21328197D0A00F2455F /* NetworkManager.swift */; };
 		66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DAE281A9A3500A16811 /* SpecsView.swift */; };
-		66409DB1281ABF5500A16811 /* NamesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66409DB0281ABF5500A16811 /* NamesArray.swift */; };
 		66409DB4281ADA9800A16811 /* PythonDownloader.py in Resources */ = {isa = PBXBuildFile; fileRef = 66409DB3281ADA9800A16811 /* PythonDownloader.py */; };
 		66496A2A284A37D2000376DE /* FavouritesDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66496A29284A37D2000376DE /* FavouritesDataController.swift */; };
 		66606C08284625B70056B859 /* FavouritesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66606C07284625B70056B859 /* FavouritesGridView.swift */; };
@@ -31,13 +30,13 @@
 		66CF7B05281959030026A2C0 /* PokeDataLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF7B04281959030026A2C0 /* PokeDataLocal.swift */; };
 		66CF7B092819598E0026A2C0 /* PokeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF7B082819598E0026A2C0 /* PokeDataController.swift */; };
 		66CF7B0B281961780026A2C0 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF7B0A281961780026A2C0 /* View+Ext.swift */; };
+		66DEA39628520E9100CAFF09 /* PokemonNameList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 66DEA39528520E9100CAFF09 /* PokemonNameList.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		662CA20F2819687000F2455F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		662CA21328197D0A00F2455F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		66409DAE281A9A3500A16811 /* SpecsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsView.swift; sourceTree = "<group>"; };
-		66409DB0281ABF5500A16811 /* NamesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesArray.swift; sourceTree = "<group>"; };
 		66409DB3281ADA9800A16811 /* PythonDownloader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonDownloader.py; sourceTree = "<group>"; };
 		66496A29284A37D2000376DE /* FavouritesDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesDataController.swift; sourceTree = "<group>"; };
 		66606C07284625B70056B859 /* FavouritesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesGridView.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		66CF7B04281959030026A2C0 /* PokeDataLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDataLocal.swift; sourceTree = "<group>"; };
 		66CF7B082819598E0026A2C0 /* PokeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDataController.swift; sourceTree = "<group>"; };
 		66CF7B0A281961780026A2C0 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		66DEA39528520E9100CAFF09 /* PokemonNameList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PokemonNameList.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				66409DB3281ADA9800A16811 /* PythonDownloader.py */,
-				66409DB0281ABF5500A16811 /* NamesArray.swift */,
+				66DEA39528520E9100CAFF09 /* PokemonNameList.txt */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +259,7 @@
 			files = (
 				66409DB4281ADA9800A16811 /* PythonDownloader.py in Resources */,
 				66885A872850B49500364D77 /* ARPokemonAssets.scnassets in Resources */,
+				66DEA39628520E9100CAFF09 /* PokemonNameList.txt in Resources */,
 				66CF7AFA281956A30026A2C0 /* Preview Assets.xcassets in Resources */,
 				66CF7AF7281956A30026A2C0 /* Assets.xcassets in Resources */,
 			);
@@ -280,7 +281,6 @@
 				66409DAF281A9A3500A16811 /* SpecsView.swift in Sources */,
 				66885A892850B4E100364D77 /* ARPokemonVC.swift in Sources */,
 				662CA2102819687000F2455F /* ListView.swift in Sources */,
-				66409DB1281ABF5500A16811 /* NamesArray.swift in Sources */,
 				66606C08284625B70056B859 /* FavouritesGridView.swift in Sources */,
 				66B9D91A283CF2E300175FBE /* PokeError.swift in Sources */,
 				669EBFD02844BB0700FD1632 /* EvolutionChainUrl.swift in Sources */,
