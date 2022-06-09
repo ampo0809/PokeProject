@@ -12,24 +12,23 @@ Da sich die Pokémon-Daten (die ersten ~900 Einträge) nicht ändern, ist die an
 Alle Pokémon-Fans und gelangweilte Menschen mit einem iPhone.
 
 ## Ablaufplan
-// https://pokeapi.co/api/v2/pokemon/charmander
-Für allgemeine Spezifikationen
+Für allgemeine Spezifikationen (https://pokeapi.co/api/v2/pokemon/charmander)
 ```
 {
-  "forms": [
-    {
-      "name": "charmander",
-      "url": "https://pokeapi.co/api/v2/pokemon-form/4/"
-    }],
-    "height": 6,
-      "species": {
-    "name": "charmander",
-    "url": "https://pokeapi.co/api/v2/pokemon-species/4/"
-  },
-    "weight": 85,
-      "sprites": {
-    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    }
+"forms": [
+{
+"name": "charmander",
+"url": "https://pokeapi.co/api/v2/pokemon-form/4/"
+}],
+"height": 6,
+"species": {
+"name": "charmander",
+"url": "https://pokeapi.co/api/v2/pokemon-species/4/"
+},
+"weight": 85,
+"sprites": {
+"front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+}
 }
 ```
 
