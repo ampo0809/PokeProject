@@ -1,5 +1,5 @@
 # PokeProject
-### Nacho Ampuero
+#### Nacho Ampuero
 --------------------
 
 ## Konzeptvorstellung
@@ -12,6 +12,10 @@ Da sich die Pokémon-Daten (die ersten ~900 Einträge) nicht ändern, ist die an
 Alle Pokémon-Fans und gelangweilte Menschen mit einem iPhone.
 
 ## Ablaufplan
+```
+          /   List           -> Specifications
+Content   -   Favourites     -> Specifications
+```       \   AR Selections  -> Camera with AR
 
 
 ## Datenstruktur
