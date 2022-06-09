@@ -17,7 +17,7 @@ Alle Pokémon-Fans und gelangweilte Menschen mit einem iPhone.
 Content   -   Favourites     -> Specifications
           \   AR Selections  -> Camera with AR
 ```
-
+![ezgif-1-718cc1df34](https://user-images.githubusercontent.com/35230792/172830161-8e069dff-f4b3-4c50-8608-d206dd4ce950.gif)
 
 
 ## Datenstruktur
